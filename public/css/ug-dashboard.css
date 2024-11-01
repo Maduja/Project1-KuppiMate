@@ -1,0 +1,1027 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+}
+.sideBar {
+    width: 255px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    box-shadow: 4px 0 5px -2px rgba(105, 104, 104, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.navLinks {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navLinks li {
+    width: 100%;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #252323;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+.navLinks li:last-child{
+    margin-top: 5px;
+}
+.navLinks li:first-child{
+    margin-top: 16px;
+}
+.navLinks a:hover{
+    background-color: #0B5ED7;
+    color: white;
+}
+.navLinks a.active {
+    background-color: #0B5ED7;
+    color: white;
+}
+.bi{
+    font-size: 17px;
+}
+.profile{
+    text-align: center;
+    color: #252323;
+}
+.profile h2{
+    margin-top: 15px;
+    font-weight: 500;
+    color: #0B5ED7;
+    display: inline-block;
+}
+.profile i{
+    margin-left: 90px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+.profile i:hover{
+    color: #0B5ED7;
+}
+.profile p{
+    font-size: 15px;
+}
+.content {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content.active {
+    display: flex;
+}
+.mainContainer {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+#header-title{
+    margin-top: -5px;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    color: #252323;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    margin-left: auto; 
+    width: 150px;
+}
+
+/* Home section */
+
+.headerImage{
+    margin-top: 20px;
+}
+.content .homecont .col-12 div,#my-courses .reviews .col-12 div{
+    background-color: #F9F9F9;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 20px;
+}
+.content .homecont .col-12 div i{
+    font-size: 5rem;
+    color: #0B5ED7;
+    display: block;
+    text-align: center;
+}
+.content .homecont .col-12 div:hover{
+    background-color: #cfd7ee;
+}
+.content .homecont .col-12 div p{
+    color: #4A4F58;
+}
+.content .homecont .col-12 div p:last-child{
+    text-align: justify;
+    margin-top: 15px;
+}
+.content .homecont .col-12 div .homecont-p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+/* setting section*/
+
+#settings .container table tr td:first-child{
+    color: #0B5ED7;
+}
+#settings .container table tr td:last-child{
+    font-weight: 500;
+}
+#settings .container h4{
+    font-weight: 600;
+    color: #626060;
+}
+#settings .container .btn-primary{
+    background-color: #0B5ED7;
+}
+#settings .btn-primary:focus{
+    box-shadow: none;
+}
+#settings .btn{
+    border-radius: 8px;
+}
+#settings .btn-primary:hover{
+    background-color: #0b53be;
+}
+#settings .btn-outline-primary:hover{
+    background-color: #0b53be;
+    color: white;
+}
+#settings .btn-outline-primary:focus{
+    box-shadow: none;
+}
+#settings input,#settings select{
+    border: 2px solid rgb(98, 96, 96,0.5);
+    border-radius: 8px;
+}
+
+/* Create Kuppi section */
+
+.content .createKuppiContainer{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+#createKuppiHeading{
+    grid-column: 1/span 6;
+    color: #667085;
+    font-weight: 600;
+    font-size: 20px;
+}
+#CreateKuppiTitle{
+    grid-column: 1/span 6;
+}
+.createKuppiContainer input,#my-courses form input{
+    width:85%;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2.2px solid #62606080;
+    color:#000000;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.createKuppiContainer label,#my-courses form label{
+    font-weight: 550;
+    color: #667085;
+}
+#CreateKuppiFrom{
+    grid-column: 1/span 6;
+}
+#CreateKuppiFrom .Kdate,#my-courses form .Kdate{
+    width: 10rem;
+    text-align: center;
+}
+#CreateKuppiFrom .Ktime,#my-courses form .Ktime{
+    width: 9rem;
+    text-align: center;
+}
+#CreateKuppiFrom input{
+    margin-right: 5px;
+}
+#CreateKuppiFrom .Kuppito{
+    margin-left: 5px;
+}
+.createKuppiContainer #selectCategory{
+    grid-column: 1/span 6;
+}
+.createKuppiContainer #selectCategory #category{
+    width: 19.5rem;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2.2px solid #62606080;
+    color:#000000;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.createKuppiContainer #selectCategory #category:focus{
+    outline: none;
+}
+.createKuppiContainer input:focus{
+    outline: none;
+}
+.createKuppiContainer .textArea{
+    grid-column: 1/span 6;
+}
+.createKuppiContainer .textArea .description{
+    width:85%;
+    margin-top: 2px;
+    resize: none;
+    border: 2.2px solid #62606080;
+    border-radius: 8px;
+    padding: 7px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.createKuppiContainer .textArea .description:focus{
+    outline: none;
+}
+.createKuppiContainer .textArea p{
+    display: block;
+    margin-left: 79.5%;
+}
+
+.content .createKuppiContainer #CreateSection{
+    grid-column: 1/span 6;
+}
+input[type="file"]{
+    border: none;
+    width:230px;
+    border: 1px solid #0B5ED7;
+}
+input[type="file"]::file-selector-button{
+    background: none;
+    color: #0B5ED7;
+    margin-right: 10px;
+    border: 1px solid #0B5ED7;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+input[type="file"]::file-selector-button:hover{
+    background-color: #0b53be;
+    color: white;
+}
+.content .createKuppiContainer #CreateSection button{
+    background: none;
+    padding: 9px;
+    border-radius:7px;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.material_upload{
+    border: none;
+    background-color: #0B5ED7;
+    color:white;
+}
+.material_upload:hover{
+    background-color: #0b53be;
+}
+.material_upload:disabled{
+    display: none;
+}
+input[type="file"]:disabled{
+    display: none;
+}
+.content .createKuppiContainer #CreateSection button:first-child{
+    border: 1px solid #0B5ED7;
+    color: #0B5ED7;
+    margin-right: 5px;
+}
+.content .createKuppiContainer #CreateSection button:last-child{
+    background-color: #0B5ED7;
+    border: 1px solid #0B5ED7;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.content .createKuppiContainer #CreateSection button:last-child:hover{
+    background-color: #0b53be;
+    color: white;
+}
+.content .createKuppiContainer #CreateSection button:first-child:hover{
+    background-color: #dedef3;
+}
+.createKuppiContainer #addCategory{
+    grid-column: 1/span 3;
+}
+.createKuppiContainer #addCategory h6{
+    font-size: 17px;
+    font-weight: 500;
+    color: #515868;
+}
+.createKuppiContainer #addCategory .btn{
+    background-color:#0b53be;
+    padding: 8px;
+    border-radius: 6px;
+}
+.createKuppiContainer #kuppiResultsection{
+    grid-column: 1/span 5;
+    margin-top: 40px;
+}
+.createKuppiContainer #kuppiResultsection div{
+    background-color: #f8f1f1;
+    border-radius: 8px;
+    padding: 13px;  
+    padding-bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.createKuppiContainer #kuppiResultsection .blocks{
+   font-size: 14px;
+   font-weight: 550;
+   color:#0B5ED7;
+}
+.createKuppiContainer #kuppiResultsection div label:first-child{
+    font-size:16px;
+}
+.createKuppiContainer #kuppiResultsection div label{
+    margin-bottom:5px ;
+}
+
+.createKuppiContainer #kuppiResultsection div .Bvalue{
+    font-size: 14px; 
+    font-weight: 400;
+}
+.createKuppiContainer #kuppiResultsection div .red{
+    color:red;
+}
+.createKuppiContainer #kuppiResultsection div p{
+    font-size: 11px;
+    opacity: 0.8;
+    margin-top: 6px;
+    padding-bottom: 6px;
+}
+.createKuppiContainer #kuppiResultsection div button{
+    padding: 6px;
+    border-radius:7px;
+    font-weight: 500;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 8px;
+}
+#kuppiResultsection .reshedule{
+    border: 1px solid #0B5ED7;
+    color: #0B5ED7;
+    background: white;
+}
+#kuppiResultsection .reshedule:hover{
+    border:none;
+    color: white;
+    background:#0B5ED7;
+}
+
+/* external session */
+
+.earnKuppi .modal-body form input{
+    width:85%;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2.2px solid #62606080;
+    color:#000000;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+.earnKuppi .modal-body form input:focus{
+    outline: none;
+}
+.earnKuppi .modal-body form select{
+    width:19.5rem;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2.2px solid #62606080;
+    color:#000000;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-bottom:12px;
+}
+.earnKuppi .modal-body form select:focus{
+    outline: none;
+}
+.earnKuppi .modal-body form label{
+    font-weight: 550;
+    color: #667085;
+
+}
+.earnKuppi .modal-body .textArea .description{
+    width:85%;
+    margin-top: 2px;
+    resize: none;
+    border: 2.2px solid #62606080;
+    border-radius: 8px;
+    padding: 7px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.earnKuppi .modal-body .textArea .description:focus{
+    outline: none;
+}
+.earnKuppi .modal-body form #label-popup{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.earnKuppi .modal-footer .btn:first-child{
+    border: 2px solid #0B5ED7;
+    color: #0B5ED7;
+    padding: 9px;
+    border-radius:7px;
+    width: 5rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+.earnKuppi .modal-footer .btn:first-child:hover{
+    background-color: #dedef3;
+    color: #0B5ED7;
+}
+.earnKuppi .modal-footer .btn:last-child{
+    border: 2px solid #0B5ED7;
+    background-color: #0B5ED7;
+    color: white;
+    padding: 9px;
+    border-radius:7px;
+    font-weight: 600;
+    font-size: 14px;
+    width: 5rem;   
+}
+.earnKuppi .modal-footer .btn:last-child:hover{
+    background-color:#0b53be;
+}
+
+/* Join for a kuppi section */
+
+
+
+.card-body{
+    border: 1px solid #0B5ED7;
+}
+.card{
+    background: none;
+    margin-top: 10px;
+   /* height: 280px; */
+}
+.content #joinHeader{
+    margin-top: 20px;
+    text-align: center;
+}
+.content #joinHeader h4{
+    font-weight: 700;
+    font-size: 28px;
+    color: #0B5ED7;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+    50% {
+        transform: translateY(-5px);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.card .badge{
+    padding: 7px;
+    font-weight: 400;
+    font-size:10px ;
+    color:#252323;
+    font-weight: 600;
+    background-color: #cacfd3;
+}
+.card-text{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 0;
+}
+.card-body .DateTime{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.card-body .link{
+    background-color: #179D14;
+    border: none;
+}
+.card-body .link:hover{
+    background-color:#0b7a09 ;
+}
+.card-body .link:focus{
+    background-color:#0b7a09 ;
+    box-shadow: none;
+
+}
+.card-body .link a{
+    text-decoration: none;
+    color: white;
+}
+.card-body button{
+    margin-top: 7px;
+}
+.card-body .enroll{
+   background-color:#0B5ED7;
+}
+.card-body .enroll:hover{
+    background-color:#0b53be;
+}
+.card-body .enroll:focus{
+    box-shadow: none;
+}
+.card-body .download{
+    background-color: #394961;
+    border: none;
+}
+.card-body .download:hover{
+    background-color:#25364d ;
+}
+.card-body .download:focus{
+    background-color:#25364d  ;
+    box-shadow: none;
+}
+.card-body h5{
+    color: #0B5ED7;
+}
+.grid-tile {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    padding: 30px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+  
+}
+.col .grid-tile span{
+    font-size: 17px;
+    font-weight: 600;
+}
+.col .btn-view{
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 14px;
+    color: white;
+    font-weight: 500;
+    background-color: #0B5ED7;
+    border: none;
+    transition: 0.5s;
+}
+.col .btn-view:hover{
+    background-color: #084297;
+}
+.col .btn-view:focus{
+    background-color:none;
+    box-shadow: none;
+}
+
+#joinKuppi .filter-category .btn{
+    background-color:#0B5ED7;
+    color:white ;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:none;
+    border-radius: 8px;
+   /* margin-left: 8px;*/
+}
+#joinKuppi .enrolled{
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 8px 5px 8px;
+}
+#joinKuppi .filter-category .btn:focus{
+    box-shadow: none;
+    border: none;
+    
+}
+#joinKuppi .filter-category .btn:hover{
+    background-color:#084297 ;
+}
+#joinKuppi .filter-category #date-filter{
+   margin-left: 10px;
+}
+#joinKuppi .filter-category label{
+    color:#667085;
+    font-weight: 500;
+}
+#joinKuppi .filter-category #category-select {
+    color:rgb(0, 0, 0);
+    font-weight: 300;
+    border: none;
+    background-color:#e2e2e2;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 7px;
+}
+#joinKuppi .filter-category #uni-select {
+    color:rgb(0, 0, 0);
+    font-weight: 300;
+    border: none;
+    background-color:#e2e2e2;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 7px;
+}
+#joinKuppi .filter-category .category-select:focus{
+    outline:none
+}
+#joinKuppi .filter-category input[type='date']{
+    border-radius: 7px;
+    padding: 2px;
+    border: none;
+    background-color:#e2e2e2;
+    font-size: 15px;
+    color:#000000;
+    font-weight: 400;
+    padding-left: 7px;
+}
+#joinKuppi .filter-category input[type='date']:focus{
+    outline: none;
+}
+#joinKuppi .filter-category button{
+    background: none;
+    border: none;
+}
+#externalSession .courseContent{
+    height: 600px;
+    overflow: scroll;
+}
+
+#externalSession .courseContent .card p { 
+    font-size: 20px;
+    font-weight: 600;
+    color: #031C40;
+    margin-top: 7px;
+}
+#externalSession .courseContent .card label{
+    margin-top: 4px;
+}
+#externalSession .courseContent .card .ratingval{
+    padding-right: 5px;
+    font-weight: 500;
+}
+#externalSession .courseContent .card .bi-star-fill{
+    color: #D79E31;
+    padding-right: 2px;
+}
+#externalSession .courseContent .card-title{
+    font-weight: 600;
+}
+#externalSession .courseContent .card .time-period{
+    color: #0B5ED7;
+    font-weight: 500;
+}
+#externalSession .courseContent .card .btn{
+    background-color: #0B5ED7;
+}
+#externalSession .courseContent .card .btn:hover{
+    background-color: #0b53be;
+}
+#externalSession .courseContent .card .btn:focus{
+   box-shadow: none;
+
+}
+#externalSession .courseContent h4{
+    text-align: center;
+    font-weight: 600;
+    color:#031C40;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+#externalSession .header h4{
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    color: #0B5ED7;
+    margin-top: 20px;
+}
+#externalSession .header p{
+    color: #394961;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+}
+#externalSession .earnKuppi .row{
+    margin-top: 60px;
+}
+#externalSession .earnKuppi #heading1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #031C40;
+    line-height: 55px;
+}
+#externalSession .earnKuppi #heading2{
+    font-size: 55px;
+    font-weight: 600;
+    color: #031C40;
+}
+#externalSession .earnKuppi a{
+    background-color: #0B5ED7;
+    margin-left: 25px;
+}
+#externalSession .earnKuppi a:hover{
+    background-color: #0b53be;
+}
+#externalSession .earnKuppi a:focus{
+    box-shadow: none;
+}
+#externalSession .earnKuppi p{
+    text-align: justify;
+    margin-top: 25px;
+    font-size: 15px;
+
+}
+#externalSession .earnKuppi .extraContent{
+    display: none;
+}
+#externalSession .earnKuppi #readMoreBtn{
+    cursor: pointer;
+    color: #084297;
+    font-weight: 500;
+}
+#externalSession .earnKuppi .modal-footer button:last-child{
+    width: 150px;
+}
+#externalSession .modal-title{
+    color: #0B5ED7;
+}
+
+/*paid course section */
+
+#paid-courses h3{
+    font-weight: 600;
+    color: #0B5ED7;
+    margin-bottom: 20px;
+}
+
+#paid-courses .addReview .description{
+    max-width: 40rem;
+}
+#paid-courses .star{
+    cursor: pointer;
+    font-size: 21px;
+    margin-right: 5px;
+}
+#paid-courses .star i{
+    font-size: 21px;
+}
+#paid-courses .star-rating input[type="number"]{
+    width: 35px;
+    font-weight: bold;
+    font-size: 17px;
+    background: none;
+    border: none;
+}
+#paid-courses .star-rating input[type="submit"]{
+    color:#0B5ED7;
+    background-color: white;
+    padding: 8px 12px 8px 12px;
+    border:2px solid #0B5ED7 ;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+#paid-courses .star-rating input[type="submit"]:hover{
+    background-color: #0B5ED7;
+    color: white;
+}
+#paid-courses .card-body .card-title{
+    color: #626060;
+    font-weight: 700;
+}
+#paid-courses h5{
+    margin-bottom: 20px;
+    color: #626060;
+    font-weight: 700;
+}
+#paid-courses .star-rating #rHead{
+    font-size:18px;
+    font-weight: 500;
+}
+.one {
+    color: rgb(255, 0, 0); /* Red for 1 star */
+}
+   
+.two, .three, .four {
+    color: rgb(247, 210, 0); /* Yellow for 2, 3, or 4 stars */
+}
+
+.five {
+    color: rgb(24, 159, 14); /* Green for 5 stars */
+}
+
+.modal-star {
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    font-size: 24px; /* Adjust size as needed */
+    color: #ccc; /* Default star color (grey) */
+}
+
+.modal-star.selected {
+    color: inherit; /* Allow the color to inherit from the specific star class */
+}
+
+#paid-courses .tutorDetails label{
+   margin-top: 10px;
+}
+#paid-courses .tutorDetails .container .d-flex{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+    background-color:  #F9F9F9;
+    max-width: 500px;
+ }
+ #paid-courses .tutorDetails .container .d-flex .p-2{
+    margin-left: 10px;
+ }
+ #paid-courses .course-links .container .d-flex .p-2,#my-courses .container .d-flex{
+    background-color: #F1F1F1;
+    border:2px solid  rgb(98, 96, 96,0.5);
+    border-radius: 10px;
+ }
+ #paid-courses .course-links .container .d-flex .p-2 label,#my-courses .container label{
+    margin-bottom: 5px;
+ }
+ #paid-courses .course-links .container .d-flex .p-2 #mDetail, #my-courses .container #mDetail {
+    color: #0B5ED7;
+    font-weight: 600;
+ }
+ #paid-courses .accordion-item button{
+    background-color:#F1F1F1 ;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 600;
+ }
+ #paid-courses .download{
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-bottom: 20px;
+ }
+ #paid-courses .download:hover{
+    background-color: #0b7a09;
+    color: white;
+ }
+ #paid-courses .download span{
+    margin-right: 7px;
+ }
+
+ /*---------------------------------*/
+ /*my courses section*/
+
+ #my-courses form label{
+    margin-top: 16px;
+ }
+ #my-courses form .btn{
+    border-radius: 8px;
+
+ }
+ #my-courses form .btn:focus{
+    box-shadow: none;
+    border-style: none;
+ }
+ #my-courses form .btn-outline-primary{
+    color: #0B5ED7;
+ }
+ #my-courses form .btn-primary{
+    background-color: #0B5ED7;
+ }
+ #my-courses form .btn-primary:hover{
+    background-color: #0b53be;
+ }
+ #my-courses form .btn-outline-primary:hover{
+    color: white;
+    background-color: #0b53be;
+ }
+ #my-courses form .btn-outline-primary:focus{
+    border: 1px solid #0B5ED7;
+ }
+ #my-courses .reviews .col-12 div{
+    border: 2px solid #0B5ED7;
+ }
+ #my-courses .reviews .col-12 div p:last-child{
+    text-align: justify;
+ }
+ #my-courses h3{
+    font-weight: 600;
+    color: #626060;
+ }
+
+ /* hamberger menue */
+
+.ham{
+    display: none;
+}
+.mainContainer header i{
+    font-size: 29px;
+    padding-right: 10px;
+    cursor: pointer;  
+}
+
+.mainContainer header i:hover{
+    color: #0B5ED7;
+}
+
+/* -------------------------------------*/
+
+@media(max-width:768px){
+    .sideBar{
+        transform: translateX(-100%);
+    }
+    .mainContainer{
+        margin-left: 10px;
+        transition: 0.3s ease;
+    }
+    .sideBar.show{
+        transform: translateX(0);
+        transition: 0.4s ease;
+    }
+    .ham{
+        display: block;
+    }
+    .profile i{
+        display: inline-block;
+        margin-left: 95px;
+    }
+    .navLinks li:last-child{
+        margin-top: 20px;
+    }
+    
+    
+}
+/* modal confrimations */
+
+.customModal .modal-content {
+    border-radius: 10px;
+    border: none;
+}
+.customModal .modal-body {
+    text-align: center;
+}
+.customModal .icon-large {
+    font-size: 4rem;
+}
+.customModal .modal-body h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.customModal .modal-body p {
+    color: #555;
+}
+
+.earnings-box {
+    background-color: #0B5ED7;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 350px;
+    width: 100%;
+}
+
+.earnings-value {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.earnings-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
